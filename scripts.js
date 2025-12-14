@@ -5,28 +5,28 @@ const cancelNav = document.querySelector(".cancelNav");
 const projects = document.querySelector(".projectsContainer");
 const projectsList = [
     {
-        imgUrl: "/images/project_thumbnails/OnlineCarRentalSystem.webp",
+        imgUrl: "./images/project_thumbnails/OnlineCarRentalSystem.webp",
         title: "Online Car Rental System",
         frontEnd: "HTML5, CSS3",
         backEnd: "Javascript, PHP",
         status: "Complete"
     },
     {
-        imgUrl: "/images/project_thumbnails/InventoryManagementSystem.webp",
+        imgUrl: "./images/project_thumbnails/InventoryManagementSystem.webp",
         title: "Inventory Management System",
         frontEnd: "Java",
         backEnd: "Java, MySQL",
         status: "Complete"
     },
     {
-        imgUrl: "/images/project_thumbnails/OnlineKaraoke.webp",
+        imgUrl: "./images/project_thumbnails/OnlineKaraoke.webp",
         title: "Online Karaoke",
         frontEnd: "HTML5, CSS3",
         backEnd: "Javascript, PHP",
         status: "Complete"
     },
     {
-        imgUrl: "/images/project_thumbnails/DiscordBOT.webp",
+        imgUrl: "./images/project_thumbnails/DiscordBOT.webp",
         title: "Discord Bot",
         frontEnd: "N/A",
         backEnd: "Javascript",
