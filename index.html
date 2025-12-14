@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- ADD ESSENTIAL STYLING -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Gugi&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="styles.css">
+        <title>Alex Portfolio Website</title>
+    </head>
+    <body>
+        <!-- HEADER -->
+        <header>
+            <span>
+                <img src="/images/logo.png" class="logo" alt="logo" />
+                <p>LEX</p>
+            </span>
+            <nav>
+                <ul>
+                    <li><a href="#home" onclick="toggleNav()" class="homeBtn">Home</a></li>
+                    <li><a href="#aboutMe" onclick="toggleNav()" class="aboutBtn">About Me</a></li>
+                    <li><a href="#projects" onclick="toggleNav()" class="projectsBtn">Projects</a></li>
+                    <li><a class="contactBtnM" href="#contact" onclick="toggleNav()">Contact</a></li>
+                </ul>
+            </nav>
+            <a class="contactBtn" href="#contact" onclick="toggleNav()">Contact</a>
+            <button onclick="toggleNav()" class="showNavBtn"><i class="fa-solid fa-bars"></i></button>
+        </header>
+
+        <!-- For Navigations Aesthetics -->
+        <span class="navBlur"></span>
+        <span class="cancelNav" onclick="toggleNav()"></span>
+
+        <!-- Main Page -->
+        <main>
+            <!-- HOME -->
+            <section id="home">
+                <article>
+                    <p><strong>Hi, I'm Lex</strong></p>
+                    <p>A student from Bohol Island State University studying Bachelor of Science and Information Technology. </p>
+                    <a href="#projects" class="myProjectsBtn">My Projects</a>
+                </article>
+                <img src="/images/profile.webp" class="profile" alt="profile"/>
+            </section>
+
+            <!-- ABOUT -->
+            <section id="aboutMe">
+                <span class="skillSet">
+                    <img src="/images/profile.webp" class="profile" alt="profile"/>
+                    <h2>Skill Set</h2>
+                    <span>
+                        <img src="/images/icons/html5.svg" alt="HTML5">
+                        <img src="/images/icons/css3.svg" alt="CSS3">
+                        <img src="/images/icons/javascript.svg" alt="Javascript">
+                    </span>
+                </span>
+                <span class="bio">
+                    <article>
+                        <img src="/images/profile.webp" class="profileM" alt="profile"/>
+                        <h2>I'm Lex, I Specialize in Building Powerful Backend Systems. Passionate About Efficient Algorithms, and Clean Architecture.</h5>
+                        <p>I've spent my past years on a continuous journey of discovery, fueled by a need to know how things work and how they can work better. I'm not just a user of technology, I've always been compelled to look under the hood, break things, and then build them back stronger.</p>
+                        <p>These days my time is spent exploring the horizon of what's possible, then bringing a piece of it back to the present.<!-- Instead of just keeping up with new tech, I've made it my mission to understand the fundamental principles that drive it forward.--></p>
+                        <p>When I'm not programming, you can usually find me playing games like MOBA and Chess which has taught me a lot about strategy and patience.</p>
+                    </article>
+                </span>
+            </section>
+
+            <!-- PROJECTS -->
+            <section id="projects">
+                <h1>Projects</h1>
+                <button onclick="scrollProjects('left')" class="arrowLeft"><i class="fa-solid fa-chevron-left"></i></button>
+                <button onclick="scrollProjects('right')" class="arrowRight"><i class="fa-solid fa-chevron-right"></i></button>
+                <div class="projectsContainer"></div>
+            </section>
+
+            <!-- CONTACT -->
+            <section id="contact">
+                <div class="contactDetails">
+                    <h1>Get In Touch</h1>
+                    <span>
+                        <label>Email:</label>
+                        <p>alexedits.exe@gmail.com</p>
+                    </span>
+                    <span>
+                        <label>Phone:</label>
+                        <p>+639519206346</p>
+                    </span>
+                    <span>
+                        <label>Socials</label>
+                        <span class="socialLinks">
+                            <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+                            <a href=""><i class="fa-brands fa-discord"></i></a>
+                            <a href=""><i class="fa-brands fa-github"></i></a>
+                        </span>
+                    </span>
+                </div>
+                <form onsubmit="verifyForm(event)">
+                    <div>
+                        <span>
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </span>
+                        <span>
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </span>
+                    </div>
+                    <div class="messageContainer">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <p id="errorMessage">PLEASE FILL ALL FIELDS</p>
+                    <button type="submit" id="submitBtn"><p class="pppp">Send Message</p><span class="loader"></span></button>
+                </form>
+            </section>
+
+            <!-- FOOTER -->
+            <footer>
+                <strong>@ 2025 Lex, All Rights Reserved.</strong>
+            </footer>
+        </main>
+
+        <!-- LOAD JAVASCRIPT -->
+        <script type="text/javascript" src="scripts.js"></script>
+    </body>
+</html>
